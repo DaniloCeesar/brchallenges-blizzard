@@ -1,0 +1,31 @@
+{
+    "name": "brchallenges-blizzard",
+    "version": "1.0.0",
+    "description": "",
+    "main": "tailwind.config.js",
+    "dependencies": {      
+    },
+    "devDependencies": {
+      "tailwindcss": "^3.0.12",
+      "uglify-js": "^3.14.5"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "mkdir -p dist && cp -R public/* dist/ && tailwindcss -i src/css/tailwind.css -o dist/style.css --minify && uglifyjs --compress --mangle -- src/js/scripts.js > dist/scripts.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/daniloceesar/brchallenges-blizzard.git"
+    },
+    "keywords": [
+      "brchallenges",
+      "tailwindcss",
+      "alpinejs"
+    ],
+    "author": "Danilo César",
+    "license": "MPL-2.0",
+    "bugs": {
+      "url": "https://github.com/daniloceesar/brchallenges-blizzard/issues"
+    },
+    "homepage": "https://github.com/daniloceesar/brchallenges-blizzard"
+  }
