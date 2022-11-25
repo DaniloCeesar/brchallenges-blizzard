@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Diablo II: Resurrected",
+        "category": "RPG de ação",
+        "image": "https://api.brchallenges.com/games/game-1.png",
+        "logo": "https://api.brchallenges.com/games/game-1-logo.png"
+    },
+    {
+        "name": "Overwatch",
+        "category": "Ação em equipe",
+        "image": "https://api.brchallenges.com/games/game-2.png",
+        "logo": "https://api.brchallenges.com/games/game-2-logo.png"
+    },
+    {
+        "name": "Overwatch 2",
+        "category": "Ação em equipe",
+        "image": "https://api.brchallenges.com/games/game-3.png",
+        "logo": "https://api.brchallenges.com/games/game-3-logo.png"
+    },
+    {
+        "name": "WoW Classic",
+        "category": "RPG multijogador em massa",
+        "image": "https://api.brchallenges.com/games/game-4.png",
+        "logo": "https://api.brchallenges.com/games/game-4-logo.png"
+    },
+    {
+        "name": "Hearthstone",
+        "category": "Jogo de cards estratégicos",
+        "image": "https://api.brchallenges.com/games/game-5.png",
+        "logo": "https://api.brchallenges.com/games/game-5-logo.png"
+    },
+    {
+        "name": "Heroes of storm",
+        "category": "RPG de ação",
+        "image": "https://api.brchallenges.com/games/game-6.png",
+        "logo": "https://api.brchallenges.com/games/game-6-logo.png"
+    },
+    {
+        "name": "Diablo IV",
+        "category": "RPG de ação",
+        "image": "https://api.brchallenges.com/games/game-7.png",
+        "logo": "https://api.brchallenges.com/games/game-7-logo.png"
+    },
+    {
+        "name": "Warcraft III Reforged",
+        "category": "RPG de ação",
+        "image": "https://api.brchallenges.com/games/game-8.png",
+        "logo": "https://api.brchallenges.com/games/game-8-logo.png"
+    },
+    {
+        "name": "Diablo III",
+        "category": "RPG de ação",
+        "image": "https://api.brchallenges.com/games/game-9.png",
+        "logo": "https://api.brchallenges.com/games/game-9-logo.png"
+    },
+    {
+        "name": "StarCraft II",
+        "category": "RPG de ação",
+        "image": "https://api.brchallenges.com/games/game-10.png",
+        "logo": "https://api.brchallenges.com/games/game-10-logo.png"
+    },
+    {
+        "name": "StarCraft Remastered",
+        "category": "RPG de ação",
+        "image": "https://api.brchallenges.com/games/game-11.png",
+        "logo": "https://api.brchallenges.com/games/game-11-logo.png"
+    }
+]
