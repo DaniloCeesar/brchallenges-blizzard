@@ -1,0 +1,18 @@
+.cta {
+    position: relative;
+    overflow: hidden;
+}
+.cta::before {
+    content: "";
+
+    background-image: url('/public/assets/footer-background.png');
+    background-position: center;
+
+    position: absolute;
+    top: -142px;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: 9;
+}
