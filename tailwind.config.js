@@ -8,7 +8,7 @@ module.exports = {
 
 	theme: {
 		fontFamily: {
-			sans: ['Inter', ...defaultTheme.fontFamily.sans],
+			sans: ['Poppins', ...defaultTheme.fontFamily.sans],
 		},
 		extend: {
 			spacing: {
