@@ -61,6 +61,31 @@
         </div>
     </section>
 
+    <section class="flex flex-col w-full exclusives py-20">
+        <div class="exclusives-header">
+            <p>Games</p>
+            <h3>Jogos<br />exclusivos</h3>
+            <div class="socials"></div>
+            <div class="links">
+                Ver todos os jogos
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-x-7 gap-y-11 exclusives-list" x-data="games = getAllGames()">
+            <template x-for="(game, index) in games" :key="index">
+                <div>
+                    <img class="rounded" :src="game.image" :alt="game.name" :title="game.name">
+                    <p class="mt-[18px] text-lg font-semibold text-neutral-200" x-text="game.name"></p>
+                    <p class="mt-1 text-sm text-neutral-200 opacity-80" x-text="game.category"></p>
+                </div>
+            </template>
+
+                <div class="border flex flex-col items-center justify-center rounded">
+                    <img class="rounded" src="/public/assets/logo-blizzard.png" title="Blizzard">
+                    <p class="mt-[36px] text-base font-semibold text-neutral-200">Ver todos os jogos</p>
+                </div>
+        </div>
+    </section>
     <script src="https://unpkg.com/alpinejs" defer></script>
 
 </body>
