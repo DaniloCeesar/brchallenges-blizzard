@@ -45,14 +45,14 @@
         </div>
     </header>
 
-    <section class="z-0 flex items-center w-full h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${item.background})`" x-data="item = featured_games[0]">
+    <section class="z-0 flex items-center w-full h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
         <div class="flex flex-row banner-selectors">
             selectors
         </div>
 
         <div class="text-white banner-content">
-            <h2 x-text="item.header" class="font-bold text-[64px] leading-[70px]"></h2>
-            <p x-text="item.description" class="mt-4 text-[18px] leading-[27px]"></p>
+            <h2 x-text="selected_game.header" class="font-bold text-[64px] leading-[70px]"></h2>
+            <p x-text="selected_game.description" class="mt-4 text-[18px] leading-[27px]"></p>
 
             <button class="inline-flex items-center bg-[#00AEFF] font-semibold text-base text-white border-[0.7px] border-[#00AEFF] px-8 py-[14px] mt-8 focus:outline-none hover:bg-cyan-700 rounded">
                 Jogue agora
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-4 gap-x-7 gap-y-11 exclusives-list" x-data="games = getAllGames()">
+        <div class="grid grid-cols-4 gap-x-7 gap-y-11 exclusives-list">
             <template x-for="(game, index) in games" :key="index">
                 <div>
                     <img class="rounded" :src="game.image" :alt="game.name" :title="game.name">

@@ -1,5 +1,8 @@
 const app = () => {
     return {
+        selected_game_index: 0,
+        selected_game: {},
+
         featured_games: [
             {
                 "title": "Diablo IV",
@@ -40,6 +43,16 @@ const app = () => {
             return "Linux";
         },
 
-        init() {}
+        async setFeaturedGame(index) {
+            this.selected_game_index = String(index);
+            this.selected_game = this.featured_games[this.selected_game_index];
+
+            // console.log('Featured Game selecionado:\t', this.selected_game_index, "\n", this.selected_game);
+        },
+
+        init() {
+            this.games = this.getAllGames();
+            this.setFeaturedGame(this.selected_game_index);
+        }
     }
 }
