@@ -42,7 +42,24 @@
         </div>
     </header>
 
-    <p>Nova página</p>
+    <section class="z-0 flex items-center w-full h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${item.background})`" x-data="item = featured_games[0]">
+        <div class="flex flex-row banner-selectors">
+            selectors
+        </div>
+
+        <div class="text-white banner-content">
+            <h2 x-text="item.header" class="font-bold text-[64px] leading-[70px]"></h2>
+            <p x-text="item.description" class="mt-4 text-[18px] leading-[27px]"></p>
+
+            <button class="inline-flex items-center bg-[#00AEFF] font-semibold text-base text-white border-[0.7px] border-[#00AEFF] px-8 py-[14px] mt-8 focus:outline-none hover:bg-cyan-700 rounded">
+                Jogue agora
+            </button>
+        </div>
+
+        <div class="banner-extras">
+            extras
+        </div>
+    </section>
 
     <script src="https://unpkg.com/alpinejs" defer></script>
 
