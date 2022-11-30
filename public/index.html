@@ -47,11 +47,11 @@
     </header>
 
     <section class="z-0 flex items-center w-full h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
-        <div class="flex flex-row banner-selectors">
+        <div class="z-10 flex flex-row banner-selectors">
             selectors
         </div>
 
-        <div class="text-white banner-content">
+        <div class="z-10 text-white banner-content">
             <h2 x-text="selected_game.header" class="font-bold text-[64px] leading-[70px]"></h2>
             <p x-text="selected_game.description" class="mt-4 text-[18px] leading-[27px]"></p>
 
@@ -60,7 +60,7 @@
             </button>
         </div>
 
-        <div class="banner-extras">
+        <div class="z-10 banner-extras">
             extras
         </div>
     </section>
