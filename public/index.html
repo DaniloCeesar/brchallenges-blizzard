@@ -19,7 +19,7 @@
 </head>
 <body class="relative bg-slate-900 font-[Poppins]" x-data="app()">
 
-    <header class="relative z-50 text-white border-b border-b-slate-700">
+    <header class="relative z-50 text-white border-b-[1.5px] border-b-white/10">
         <div class="container flex flex-col flex-wrap items-center mx-auto py-7 md:flex-row">
             <a class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
                 <img src="/public/assets/logo-blizzard.png" height="40" alt="Blizzard" />
@@ -43,6 +43,7 @@
                 Logar
             </button>
         </div>
+        <div class="ml-4 lg:ml-28 border-t-2 border-blue-500 w-11"></div>
     </header>
 
     <section class="z-0 flex items-center w-full h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
