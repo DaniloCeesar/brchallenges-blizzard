@@ -48,7 +48,11 @@
 
     <section class="z-0 flex items-center w-full h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
         <div class="z-10 flex flex-row banner-selectors">
-            selectors
+            <template x-for="(game, index) in featured_games" :key="index">
+                <a href="#" @click.prevent="setFeaturedGame(index)">
+                    <img class="w-12 h-12 rounded" :src="game.badge" :alt="game.name" :title="game.name" :class="(index == selected_game_index) ? '' : 'grayscale'">
+                </a>
+            </template>
         </div>
 
         <div class="z-10 text-white banner-content">
