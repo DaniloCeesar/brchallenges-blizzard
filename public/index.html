@@ -47,7 +47,7 @@
     </header>
 
     <section class="z-0 w-screen h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
-        <div class="container grid items-center h-full grid-cols-12 px-8 mx-auto">
+        <div class="container grid items-center h-full grid-cols-12 mx-auto">
             <div class="z-10 flex flex-col col-span-2 gap-y-5 banner-selectors">
                 <template x-for="(game, index) in featured_games" :key="index">
                     <a href="#" @click.prevent="setFeaturedGame(index)">
