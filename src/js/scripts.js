@@ -12,7 +12,7 @@ const app = () => {
                 "background": "/public/assets/banner-hero/games/diablo-bg.png",
                 "logo": "/public/assets/banner-hero/games/diablo-logo.png",
                 "trailer": "/public/assets/banner-hero/games/diablo-animation.gif",
-                "trailer-static": "/public/assets/banner-hero/games/diablo-animation-cover.png"
+                "trailer_static": "/public/assets/banner-hero/games/diablo-animation-cover.png"
             },
             {
                 "title": "Hearthstone",
@@ -22,7 +22,7 @@ const app = () => {
                 "background": "/public/assets/banner-hero/games/hearthstone-bg.png",
                 "logo": "/public/assets/banner-hero/games/hearthstone-logo.png",
                 "trailer": "/public/assets/banner-hero/games/hearthstone-animation.gif",
-                "trailer-static": "/public/assets/banner-hero/games/hearthstone-animation-cover.png"
+                "trailer_static": "/public/assets/banner-hero/games/hearthstone-animation-cover.png"
             },
             {
                 "title": "Shadowlands",
@@ -32,7 +32,7 @@ const app = () => {
                 "background": "/public/assets/banner-hero/games/wow-bg.png",
                 "logo": "/public/assets/banner-hero/games/wow-logo.png",
                 "trailer": "/public/assets/banner-hero/games/wow-animation.gif",
-                "trailer-static": "/public/assets/banner-hero/games/wow-animation-cover.png"
+                "trailer_static": "/public/assets/banner-hero/games/wow-animation-cover.png"
             }
         ],
 
@@ -54,6 +54,18 @@ const app = () => {
             this.selected_game = this.featured_games[this.selected_game_index];
 
             // console.log('Featured Game selecionado:\t', this.selected_game_index, "\n", this.selected_game);
+        },
+
+        toggleTrailerAnimation(animated = false) {
+            let element = document.querySelector('.banner_trailer');
+
+            if ( element.classList.contains('animated-on') ) {
+                element.setAttribute('src', this.selected_game.trailer_static);
+                element.classList.remove('animated-on');
+            } else {
+                element.setAttribute('src', this.selected_game.trailer);
+                element.classList.add('animated-on');
+            }
         },
 
         init() {
