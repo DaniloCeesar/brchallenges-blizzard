@@ -46,51 +46,53 @@
         </div>
     </header>
 
-    <section class="z-0 grid items-center w-screen h-screen grid-cols-12 px-8 -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
-        <div class="z-10 flex flex-col col-span-2 gap-y-5 banner-selectors">
-            <template x-for="(game, index) in featured_games" :key="index">
-                <a href="#" @click.prevent="setFeaturedGame(index)">
-                    <img class="w-12 h-12 rounded" :src="game.badge" :alt="game.name" :title="game.name" :class="(index == selected_game_index) ? '' : 'grayscale'">
-                </a>
-            </template>
-        </div>
-
-        <div class="z-10 col-span-6 text-white banner-content">
-            <h2 x-text="selected_game.header" class="font-bold text-[64px] leading-[70px]"></h2>
-            <p x-text="selected_game.description" class="mt-4 text-[18px] leading-[27px]"></p>
-
-            <button class="inline-flex items-center bg-[#00AEFF] font-semibold text-base text-white border-[0.7px] border-[#00AEFF] px-8 py-[14px] mt-8 focus:outline-none hover:bg-cyan-700 rounded">
-                Jogue agora
-            </button>
-        </div>
-
-        <div class="z-10 flex flex-col h-full col-span-4 w-fit justify-self-end py-28 banner-extras">
-            <div class="flex flex-col items-end">
-                <img class="h-40 w-72 banner_logo" :src="selected_game.logo" :alt="selected_game.title" :title="selected_game.title" />
+    <section class="z-0 w-screen h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
+        <div class="container grid items-center h-full grid-cols-12 px-8 mx-auto">
+            <div class="z-10 flex flex-col col-span-2 gap-y-5 banner-selectors">
+                <template x-for="(game, index) in featured_games" :key="index">
+                    <a href="#" @click.prevent="setFeaturedGame(index)">
+                        <img class="w-12 h-12 rounded" :src="game.badge" :alt="game.name" :title="game.name" :class="(index == selected_game_index) ? '' : 'grayscale'">
+                    </a>
+                </template>
             </div>
 
-            <div class="flex flex-col items-end mt-auto">
-                <p class="mb-4 text-xs font-semibold text-white uppercase">Assista o trailer</p>
-                <div class="relative flex items-center justify-center banner_trailer">
-                    <svg class="absolute w-14 h-14 banner_trailer_play" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_b_4025_268)">
-                            <circle cx="25.5" cy="25.5" r="25.5" fill="url(#paint0_linear_4025_268)"/>
-                        </g>
-                            <path d="M34.2537 25.5001L20.5522 16.7463L20.5522 34.2538L34.2537 25.5001Z" fill="#00AEFF"/>
-                        <defs>
-                            <filter id="filter0_b_4025_268" x="-3" y="-3" width="57" height="57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.5"/>
-                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_4025_268"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4025_268" result="shape"/>
-                            </filter>
-                            <linearGradient id="paint0_linear_4025_268" x1="30.8652" y1="-10.0318" x2="59.2202" y2="20.0814" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#07070A" stop-opacity="0.86"/>
-                                <stop offset="1" stop-color="#0F1016" stop-opacity="0.5"/>
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                    <img class="h-40 shadow w-72" :src="selected_game.trailer_static" :alt="selected_game.title" :title="selected_game.title" @mouseleave="toggleTrailerAnimation()" @mouseenter="toggleTrailerAnimation()" />
+            <div class="z-10 col-span-6 text-white banner-content">
+                <h2 x-text="selected_game.header" class="font-bold text-[64px] leading-[70px]"></h2>
+                <p x-text="selected_game.description" class="mt-4 text-[18px] leading-[27px]"></p>
+
+                <button class="inline-flex items-center bg-[#00AEFF] font-semibold text-base text-white border-[0.7px] border-[#00AEFF] px-8 py-[14px] mt-8 focus:outline-none hover:bg-cyan-700 rounded">
+                    Jogue agora
+                </button>
+            </div>
+
+            <div class="z-10 flex flex-col h-full col-span-4 w-fit justify-self-end py-28 banner-extras">
+                <div class="flex flex-col items-end">
+                    <img class="h-40 w-72 banner_logo" :src="selected_game.logo" :alt="selected_game.title" :title="selected_game.title" />
+                </div>
+
+                <div class="flex flex-col items-end mt-auto">
+                    <p class="mb-4 text-xs font-semibold text-white uppercase">Assista o trailer</p>
+                    <div class="relative flex items-center justify-center banner_trailer">
+                        <svg class="absolute w-14 h-14 banner_trailer_play" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_b_4025_268)">
+                                <circle cx="25.5" cy="25.5" r="25.5" fill="url(#paint0_linear_4025_268)"/>
+                            </g>
+                                <path d="M34.2537 25.5001L20.5522 16.7463L20.5522 34.2538L34.2537 25.5001Z" fill="#00AEFF"/>
+                            <defs>
+                                <filter id="filter0_b_4025_268" x="-3" y="-3" width="57" height="57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.5"/>
+                                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_4025_268"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4025_268" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_4025_268" x1="30.8652" y1="-10.0318" x2="59.2202" y2="20.0814" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#07070A" stop-opacity="0.86"/>
+                                    <stop offset="1" stop-color="#0F1016" stop-opacity="0.5"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <img class="h-40 shadow w-72" :src="selected_game.trailer_static" :alt="selected_game.title" :title="selected_game.title" @mouseleave="toggleTrailerAnimation()" @mouseenter="toggleTrailerAnimation()" />
+                    </div>
                 </div>
             </div>
         </div>
