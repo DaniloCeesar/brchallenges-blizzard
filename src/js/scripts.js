@@ -57,14 +57,17 @@ const app = () => {
         },
 
         toggleTrailerAnimation(animated = false) {
-            let element = document.querySelector('.banner_trailer');
+            let element = document.querySelector('.banner_trailer > img');
+            let playButton = document.querySelector('.banner_trailer > .banner_trailer_play');
 
             if ( element.classList.contains('animated-on') ) {
                 element.setAttribute('src', this.selected_game.trailer_static);
                 element.classList.remove('animated-on');
+                playButton.style.display = 'initial';
             } else {
                 element.setAttribute('src', this.selected_game.trailer);
                 element.classList.add('animated-on');
+                playButton.style.display = 'none';
             }
         },
 

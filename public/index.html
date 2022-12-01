@@ -67,7 +67,27 @@
 
             <div class="flex flex-col items-end mt-auto">
                 <p class="mb-4 text-xs font-semibold text-white uppercase">Assista o trailer</p>
-                <img class="h-40 shadow w-72 banner_trailer" :src="selected_game.trailer_static" :alt="selected_game.title" :title="selected_game.title" @mouseleave="toggleTrailerAnimation()" @mouseenter="toggleTrailerAnimation()" />
+                <div class="relative flex items-center justify-center banner_trailer">
+                    <svg class="absolute w-14 h-14 banner_trailer_play" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_4025_268)">
+                            <circle cx="25.5" cy="25.5" r="25.5" fill="url(#paint0_linear_4025_268)"/>
+                        </g>
+                            <path d="M34.2537 25.5001L20.5522 16.7463L20.5522 34.2538L34.2537 25.5001Z" fill="#00AEFF"/>
+                        <defs>
+                            <filter id="filter0_b_4025_268" x="-3" y="-3" width="57" height="57" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="1.5"/>
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_4025_268"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_4025_268" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_4025_268" x1="30.8652" y1="-10.0318" x2="59.2202" y2="20.0814" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#07070A" stop-opacity="0.86"/>
+                                <stop offset="1" stop-color="#0F1016" stop-opacity="0.5"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <img class="h-40 shadow w-72" :src="selected_game.trailer_static" :alt="selected_game.title" :title="selected_game.title" @mouseleave="toggleTrailerAnimation()" @mouseenter="toggleTrailerAnimation()" />
+                </div>
             </div>
         </div>
     </section>
