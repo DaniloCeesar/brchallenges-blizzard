@@ -51,7 +51,7 @@
             <div class="z-10 flex flex-col col-span-2 gap-y-5 banner-selectors">
                 <template x-for="(game, index) in featured_games" :key="index">
                     <a href="#" @click.prevent="setFeaturedGame(index)">
-                        <img class="w-12 h-12 rounded" :src="game.badge" :alt="game.name" :title="game.name" :class="(index == selected_game_index) ? '' : 'grayscale'">
+                        <img class="w-12 h-12 rounded" :src="game.badge" :alt="game.title" :title="game.title" :class="(index == selected_game_index) ? '' : 'grayscale'">
                     </a>
                 </template>
             </div>
