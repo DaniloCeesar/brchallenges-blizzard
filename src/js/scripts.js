@@ -35,8 +35,9 @@ const app = () => {
                 "trailer_static": "/public/assets/banner-hero/games/wow-animation-cover.png"
             }
         ],
-
         games: [],
+
+        pausedProgressBar: false,
 
         async getAllGames() { // @TODO: Substituir por endpoint externo
             let response = await fetch('/src/js/games.json');
@@ -68,7 +69,9 @@ const app = () => {
             // Atualiza o Featured Game dentro de um intervalo de tempo
             let bannerTimer = window.setInterval(() => {
                 let oldProgress = parseInt(progressEl.style.width) || 0;
-                progressEl.style.width = (parseInt(oldProgress) + 5/3) + "%"; // `5/3 == 100% (viewport width) / 60s (1min)`
+
+                if ( this.pausedProgressBar != true )
+                    progressEl.style.width = (parseInt(oldProgress) + 5/3) + "%"; // `5/3 == 100% (viewport width) / 60s (1min)`
 
                 // Ao atingir `100%`, reinicia a função
                 if ( oldProgress == 100 ) {
@@ -87,10 +90,14 @@ const app = () => {
                 element.setAttribute('src', this.selected_game.trailer_static);
                 element.classList.remove('animated-on');
                 playButton.style.display = 'initial';
+
+                this.pausedProgressBar = false;
             } else {
                 element.setAttribute('src', this.selected_game.trailer);
                 element.classList.add('animated-on');
                 playButton.style.display = 'none';
+
+                this.pausedProgressBar = true;
             }
         },
 
