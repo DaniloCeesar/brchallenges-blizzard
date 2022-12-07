@@ -58,12 +58,8 @@ const app = () => {
             this.updateProgressBar();
         },
 
-        aumentaValor(antigo) {
-            return parseInt(antigo) + 5/3;
-        },
-
         updateProgressBar() {
-            let progressEl = document.querySelector('.banner-progress');
+            const progressEl = document.querySelector('.banner-progress');
 
             // Obtém o `index` do próximo Selected Game; se não houver próximo item, reinicia a contagem
             let nextGameIndex = parseInt(this.selected_game_index) + 1;
@@ -72,9 +68,7 @@ const app = () => {
             // Atualiza o Featured Game dentro de um intervalo de tempo
             let bannerTimer = window.setInterval(() => {
                 let oldProgress = parseInt(progressEl.style.width) || 0;
-
-                progressEl.style.width = this.aumentaValor(oldProgress) + "%";
-                // console.log( oldProgress + "%" );
+                progressEl.style.width = (parseInt(oldProgress) + 5/3) + "%"; // `5/3 == 100% (viewport width) / 60s (1min)`
 
                 // Ao atingir `100%`, reinicia a função
                 if ( oldProgress == 100 ) {
