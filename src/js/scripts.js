@@ -54,6 +54,35 @@ const app = () => {
             this.selected_game = this.featured_games[this.selected_game_index];
 
             // console.log('Featured Game selecionado:\t', this.selected_game_index, "\n", this.selected_game);
+
+            this.updateProgressBar();
+        },
+
+        aumentaValor(antigo) {
+            return parseInt(antigo) + 5/3;
+        },
+
+        updateProgressBar() {
+            let progressEl = document.querySelector('.banner-progress');
+
+            // Obtém o `index` do próximo Selected Game; se não houver próximo item, reinicia a contagem
+            let nextGameIndex = parseInt(this.selected_game_index) + 1;
+            if ( typeof this.featured_games[nextGameIndex] == "undefined" ) nextGameIndex = 0;
+
+            // Atualiza o Featured Game dentro de um intervalo de tempo
+            let bannerTimer = window.setInterval(() => {
+                let oldProgress = parseInt(progressEl.style.width) || 0;
+
+                progressEl.style.width = this.aumentaValor(oldProgress) + "%";
+                // console.log( oldProgress + "%" );
+
+                // Ao atingir `100%`, reinicia a função
+                if ( oldProgress == 100 ) {
+                    progressEl.style.width = 0; // Zera o valor de progresso
+                    window.clearInterval(bannerTimer); // Reseta a função
+                    this.setFeaturedGame(nextGameIndex); // Seleciona o próximo Featured Game, que consequentemente reinicia a função
+                }
+            }, 100);
         },
 
         toggleTrailerAnimation(animated = false) {
