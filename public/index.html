@@ -50,7 +50,7 @@
         <div class="container grid items-center h-full grid-cols-12 mx-auto">
             <div class="z-10 flex flex-col col-span-2 gap-y-5 banner-selectors">
                 <template x-for="(game, index) in featured_games" :key="index">
-                    <a href="#" @click.prevent="setFeaturedGame(index)" @mouseleave="pausedProgressBar = false" @mouseenter="pausedProgressBar = true">
+                    <a class="w-fit" href="#" @click.prevent="setFeaturedGame(index)" @mouseleave="pausedProgressBar = false" @mouseenter="pausedProgressBar = true">
                         <img class="w-12 h-12 transition duration-200 rounded" :src="game.badge" :alt="game.title" :title="game.title" :class="(index == selected_game_index) ? '' : 'grayscale hover:sepia'">
                     </a>
                 </template>
