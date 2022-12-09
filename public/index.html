@@ -105,7 +105,7 @@
 
     <section class="container flex flex-col w-full py-20 mx-auto exclusives">
         <div class="flex flex-row justify-between mb-20 exclusives-header">
-            <p class="font-semibold text-[#8F9199] text-[15px] uppercase">Games</p>
+            <p class="font-semibold text-[#8F9199] text-[15px] uppercase hidden lg:flex">Games</p>
             <h3 class="text-white font-bold text-[32px] leading-9">Jogos<br />exclusivos</h3>
 
             <div class="flex flex-row gap-6 pb-2 socials place-self-end">
@@ -146,7 +146,7 @@
             </a>
         </div>
 
-        <div class="grid grid-cols-4 gap-x-7 gap-y-11 exclusives-list">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7 gap-y-11 exclusives-list">
             <template x-for="(game, index) in games" :key="index">
                 <div>
                     <a href="#">
