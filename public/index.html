@@ -49,9 +49,9 @@
         </div>
     </header>
 
-    <section class="z-0 w-screen h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
+    <section class="z-0 w-screen h-screen py-24 -mt-24 bg-fixed bg-center bg-cover lg:py-0 banner" :style="`background-image: url(${selected_game.background})`">
         <div class="container grid items-center h-full grid-cols-12 mx-auto">
-            <div class="z-10 flex flex-col col-span-2 gap-y-5 banner-selectors">
+            <div class="z-10 flex flex-row order-last col-span-12 gap-5 lg:col-span-2 lg:flex-col banner-selectors lg:order-none">
                 <template x-for="(game, index) in featured_games" :key="index">
                     <a class="w-fit" href="#" @click.prevent="setFeaturedGame(index)" @mouseleave="pausedProgressBar = false" @mouseenter="pausedProgressBar = true">
                         <img class="w-12 h-12 transition duration-200 rounded" :src="game.badge" :alt="game.title" :title="game.title" :class="(index == selected_game_index) ? '' : 'grayscale hover:sepia'">
@@ -59,7 +59,7 @@
                 </template>
             </div>
 
-            <div class="z-10 col-span-6 text-white banner-content">
+            <div class="z-10 col-span-12 text-white md:col-span-6 banner-content">
                 <h2 x-text="selected_game.header" class="font-bold text-[64px] leading-[70px]"></h2>
                 <p x-text="selected_game.description" class="mt-4 text-[18px] leading-[27px]"></p>
 
@@ -68,7 +68,7 @@
                 </button>
             </div>
 
-            <div class="z-10 flex flex-col h-full col-span-4 w-fit justify-self-end py-28 banner-extras">
+            <div class="z-10 flex-col hidden h-full col-span-12 md:col-span-6 lg:col-span-4 md:flex w-fit justify-self-end py-28 banner-extras">
                 <div class="flex flex-col items-end">
                     <img class="h-40 w-72 banner_logo" :src="selected_game.logo" :alt="selected_game.title" :title="selected_game.title" />
                 </div>
