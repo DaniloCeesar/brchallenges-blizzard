@@ -60,6 +60,7 @@ const app = () => {
         },
 
         updateProgressBar() {
+            const duracao = 100;
             const progressEl = document.querySelector('.banner-progress');
 
             // @FIX: Reinicializa o método, se já inicializado anteriormente
@@ -77,7 +78,7 @@ const app = () => {
                 let oldProgress = parseInt(progressEl.style.width) || 0;
 
                 if ( this.pausedProgressBar != true )
-                    progressEl.style.width = (parseInt(oldProgress) + 5/3) + "%"; // `5/3 == 100% (viewport width) / 60s (1min)`
+                    progressEl.style.width = (parseInt(oldProgress) + 100/duracao) + "%"; // `100% (viewport width) / duracao (ms)`
 
                 // Ao atingir `100%`, reinicia a função
                 if ( oldProgress == 100 ) {
@@ -85,7 +86,7 @@ const app = () => {
                     window.clearInterval(bannerTimer); // Reseta a função
                     this.setFeaturedGame(nextGameIndex); // Seleciona o próximo Featured Game, que consequentemente reinicia a função
                 }
-            }, 100);
+            }, duracao);
         },
 
         toggleTrailerAnimation(animated = false) {
