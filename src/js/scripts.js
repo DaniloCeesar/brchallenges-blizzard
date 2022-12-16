@@ -1,5 +1,7 @@
 const app = () => {
     return {
+        modalLogin: false,
+
         selected_game_index: 0,
         selected_game: {},
 

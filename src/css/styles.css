@@ -59,3 +59,9 @@
 .exclusives-list .exclusive-game-logo {
     z-index: 2;
 }
+
+#modals #modalLogin {
+    background-image: url('/public/img/modal-bg.png');
+    background-size: cover;
+    background-position: center;
+}
