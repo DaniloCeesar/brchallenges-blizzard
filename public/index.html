@@ -20,12 +20,13 @@
 <body class="relative bg-[#020203] font-[Poppins] overflow-x-hidden" x-data="app()">
 
     <header class="relative z-50 text-white border-b-[1.5px] border-b-white/10">
-        <div class="container flex flex-col flex-wrap items-center mx-auto py-7 md:flex-row">
+        <div class="container flex flex-row flex-wrap items-center justify-between px-10 mx-auto py-7 md:px-0">
             <a class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
                 <img src="/public/assets/logo-blizzard.png" height="40" alt="Blizzard" />
                 <div class="absolute bottom-0 border-t-2 border-blue-500 w-11"></div>
             </a>
-            <nav class="flex flex-wrap items-center justify-center text-sm md:mr-auto md:ml-4 md:py-1">
+
+            <nav class="flex-wrap items-center justify-center hidden text-sm lg:flex md:mr-auto md:ml-4 md:py-1">
                 <a class="mr-5 hover:text-slate-400">Jogos</a>
                 <a class="mr-5 hover:text-slate-400">Esportes</a>
                 <a class="mr-5 hover:text-slate-400">Loja</a>
@@ -33,22 +34,24 @@
                 <a class="mr-5 hover:text-slate-400">Suporte</a>
             </nav>
 
-            <button class="inline-flex items-center px-6 py-2 mt-4 text-sm font-medium border-[0.7px] border-white rounded focus:outline-none hover:bg-white hover:text-slate-900 md:mt-0 transition-colors duration-150">
-                Criar conta
-            </button>
-            <button class="inline-flex items-center bg-[#00AEFF] text-white font-medium border-[0.7px] border-[#00AEFF] py-2 px-6 ml-2 focus:outline-none hover:bg-cyan-700 rounded-[3px] text-sm mt-4 md:mt-0 transition-colors duration-150" @click.prevent="modalLogin = true">
-                <svg class="w-4 h-4 mr-1" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5398 15.9664L15.1826 15.0695C15.0021 14.6145 14.7215 14.2064 14.3623 13.8737L14.297 13.8136C13.7318 13.2891 12.989 12.9973 12.2177 12.9973H7.10191C6.33057 12.9973 5.58779 13.2891 5.02153 13.8125L4.95623 13.8737C4.59709 14.2064 4.31752 14.6145 4.13591 15.0695L3.77881 15.9664" stroke="currentColor" stroke-width="1.77404" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.1848 2.81998C13.5793 4.21456 13.5793 6.47561 12.1848 7.87019C10.7902 9.26477 8.52914 9.26477 7.13456 7.87019C5.73998 6.47561 5.73998 4.21456 7.13456 2.81998C8.52914 1.4254 10.7902 1.4254 12.1848 2.81998" stroke="currentColor" stroke-width="1.77404" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Logar
-            </button>
+            <div class="flex items-center justify-self-end">
+                <button class="inline-flex items-center px-6 py-2 mt-4 text-sm font-medium border-[0.7px] border-white rounded focus:outline-none hover:bg-white hover:text-slate-900 md:mt-0 transition-colors duration-150">
+                    Criar conta
+                </button>
+                <button class="inline-flex items-center bg-[#00AEFF] text-white font-medium border-[0.7px] border-[#00AEFF] py-2 px-6 ml-2 focus:outline-none hover:bg-cyan-700 rounded-[3px] text-sm mt-4 md:mt-0 transition-colors duration-150" @click.prevent="modalLogin = true">
+                    <svg class="w-4 h-4 mr-1" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5398 15.9664L15.1826 15.0695C15.0021 14.6145 14.7215 14.2064 14.3623 13.8737L14.297 13.8136C13.7318 13.2891 12.989 12.9973 12.2177 12.9973H7.10191C6.33057 12.9973 5.58779 13.2891 5.02153 13.8125L4.95623 13.8737C4.59709 14.2064 4.31752 14.6145 4.13591 15.0695L3.77881 15.9664" stroke="currentColor" stroke-width="1.77404" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.1848 2.81998C13.5793 4.21456 13.5793 6.47561 12.1848 7.87019C10.7902 9.26477 8.52914 9.26477 7.13456 7.87019C5.73998 6.47561 5.73998 4.21456 7.13456 2.81998C8.52914 1.4254 10.7902 1.4254 12.1848 2.81998" stroke="currentColor" stroke-width="1.77404" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Logar
+                </button>
+            </div>
         </div>
     </header>
 
-    <section class="z-0 w-screen h-screen -mt-24 bg-fixed bg-center bg-cover banner" :style="`background-image: url(${selected_game.background})`">
+    <section class="z-0 w-screen h-screen py-24 -mt-24 bg-fixed bg-center bg-cover lg:py-0 banner" :style="`background-image: url(${selected_game.background})`">
         <div class="container grid items-center h-full grid-cols-12 mx-auto">
-            <div class="z-10 flex flex-col col-span-2 gap-y-5 banner-selectors">
+            <div class="z-10 flex flex-row order-last col-span-12 gap-5 lg:col-span-2 lg:flex-col banner-selectors lg:order-none">
                 <template x-for="(game, index) in featured_games" :key="index">
                     <a class="w-fit" href="#" @click.prevent="setFeaturedGame(index)" @mouseleave="pausedProgressBar = false" @mouseenter="pausedProgressBar = true">
                         <img class="w-12 h-12 transition duration-200 rounded" :src="game.badge" :alt="game.title" :title="game.title" :class="(index == selected_game_index) ? '' : 'grayscale hover:sepia'">
@@ -56,8 +59,8 @@
                 </template>
             </div>
 
-            <div class="z-10 col-span-6 text-white banner-content">
-                <h2 x-text="selected_game.header" class="font-bold text-[64px] leading-[70px]"></h2>
+            <div class="z-10 col-span-12 text-white md:col-span-6 banner-content">
+                <h2 x-text="selected_game.header" class="font-bold text-[40px] md:text-[64px] leading-[44px] md:leading-[70px]"></h2>
                 <p x-text="selected_game.description" class="mt-4 text-[18px] leading-[27px]"></p>
 
                 <button class="inline-flex items-center bg-[#00AEFF] font-semibold text-base text-white border-[0.7px] border-[#00AEFF] px-8 py-[14px] mt-8 focus:outline-none hover:bg-cyan-700 rounded transition-colors duration-150">
@@ -65,13 +68,14 @@
                 </button>
             </div>
 
-            <div class="z-10 flex flex-col h-full col-span-4 w-fit justify-self-end py-28 banner-extras">
+            <div class="z-10 flex-col hidden h-full col-span-12 md:col-span-6 lg:col-span-4 md:flex w-fit justify-self-end py-28 banner-extras">
                 <div class="flex flex-col items-end">
                     <img class="h-40 w-72 banner_logo" :src="selected_game.logo" :alt="selected_game.title" :title="selected_game.title" />
                 </div>
 
                 <div class="flex flex-col items-end mt-auto">
-                    <p class="mb-4 text-xs font-semibold text-white uppercase">Assista ao trailer</p>
+                    <p class="hidden mb-4 text-xs font-semibold text-white uppercase lg:flex">Assista ao trailer</p>
+
                     <div class="relative flex items-center justify-center banner_trailer">
                         <svg class="absolute w-14 h-14 banner_trailer_play" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_b_4025_268)">
@@ -102,7 +106,7 @@
 
     <section class="container flex flex-col w-full py-20 mx-auto exclusives">
         <div class="flex flex-row justify-between mb-20 exclusives-header">
-            <p class="font-semibold text-[#8F9199] text-[15px] uppercase">Games</p>
+            <p class="font-semibold text-[#8F9199] text-[15px] uppercase hidden lg:flex">Games</p>
             <h3 class="text-white font-bold text-[32px] leading-9">Jogos<br />exclusivos</h3>
 
             <div class="flex flex-row gap-6 pb-2 socials place-self-end">
@@ -143,7 +147,7 @@
             </a>
         </div>
 
-        <div class="grid grid-cols-4 gap-x-7 gap-y-11 exclusives-list">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7 gap-y-11 exclusives-list">
             <template x-for="(game, index) in games" :key="index">
                 <div>
                     <a href="#">
