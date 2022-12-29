@@ -39,6 +39,81 @@ const app = () => {
         ],
         games: [],
 
+        isOpenMenuJogos: false,
+        isOpenMenuEsportes: false,
+        megamenu_games: [
+            {
+                "title": "Diablo® II Ressurected",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Overwatch® 2",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "World of Warcraft®",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Hearthstone®",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Heroes of the Storm®",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Warcraft® III Reforged",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Diablo® IV",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Diablo® Immortal",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Diablo® III",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "StarCraft® II",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "StarCraft® Remastered",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            },
+            {
+                "title": "Arcade da Blizzard®",
+                "badge": "/public/assets/banner-hero/icons/game-1.png"
+            }
+        ],
+        megamenu_sports: [
+            {
+                "title": "Hearthstone® Masters",
+                "badge": "/public/assets/banner-hero/games/wow-logo.png"
+            },
+            {
+                "title": "Campeonato Mundial de Arena WoW®",
+                "badge": "/public/assets/banner-hero/games/wow-logo.png"
+            },
+            {
+                "title": "StarCraft® II WCS",
+                "badge": "/public/assets/banner-hero/games/wow-logo.png"
+            },
+            {
+                "title": "Copa Mundial de Overwatch®",
+                "badge": "/public/assets/banner-hero/games/wow-logo.png"
+            },
+            {
+                "title": "Liga de Overwatch®",
+                "badge": "/public/assets/banner-hero/games/wow-logo.png"
+            }
+        ],
+
         pausedProgressBar: false,
 
         async getAllGames() { // @TODO: Substituir por endpoint externo
