@@ -149,10 +149,10 @@
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7 gap-y-11 exclusives-list">
             <template x-for="(game, index) in games" :key="index">
-                <div>
+                <div class="group">
                     <a href="#">
                         <div class="relative flex justify-center w-full exclusive-game-banner">
-                            <img class="w-full rounded exclusive-game-image" :src="game.image" :alt="game.name" :title="game.name" />
+                            <img class="w-full transition-transform duration-500 rounded exclusive-game-image group-hover:scale-125" :src="game.image" :alt="game.name" :title="game.name" />
                             <img class="absolute w-40 rounded h-28 bottom-12 exclusive-game-logo" :src="game.logo" :alt="game.name" />
                         </div>
                         <p class="mt-[18px] text-lg font-semibold text-neutral-200" x-text="game.name"></p>
