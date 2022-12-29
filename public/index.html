@@ -20,9 +20,9 @@
 <body class="relative bg-[#020203] font-[Poppins] overflow-x-hidden" x-data="app()">
 
     <header class="relative z-50 text-white border-b-[1.5px] border-b-white/10">
-        <div class="container flex flex-row flex-wrap items-center justify-between px-10 mx-auto py-7 md:px-0">
-            <a class="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
-                <img src="/public/assets/logo-blizzard.png" height="40" alt="Blizzard" />
+        <div class="container flex flex-row flex-wrap items-center justify-between px-6 mx-auto py-7 2xl:px-0">
+            <a class="flex items-center font-medium text-gray-900 title-font md:mb-0">
+                <img src="/public/assets/logo-blizzard.png" class="h-8 md:h-10" alt="Blizzard" />
                 <div class="absolute bottom-0 border-t-2 border-blue-500 w-11"></div>
             </a>
 
@@ -34,7 +34,7 @@
                 <a href="#" class="mr-5 hover:text-slate-400">Suporte</a>
             </nav>
 
-            <div class="flex items-center justify-self-end">
+            <div class="items-center hidden md:flex justify-self-end">
                 <button class="inline-flex items-center px-6 py-2 mt-4 text-sm font-medium border-[0.7px] border-white rounded focus:outline-none hover:bg-white hover:text-slate-900 md:mt-0 transition-colors duration-150">
                     Criar conta
                 </button>
@@ -49,9 +49,9 @@
         </div>
     </header>
 
-    <section class="z-0 w-screen h-screen py-24 -mt-24 bg-fixed bg-center bg-cover lg:py-0 banner" :style="`background-image: url(${selected_game.background})`">
+    <section class="z-0 w-screen h-screen px-6 pt-24 pb-12 -mt-24 bg-fixed bg-center bg-cover lg:pb-24 2xl:px-0 2xl:py-0 banner" :style="`background-image: url(${selected_game.background})`">
         <div class="container grid items-center h-full grid-cols-12 mx-auto">
-            <div class="z-10 flex flex-row order-last col-span-12 gap-5 lg:col-span-2 lg:flex-col banner-selectors lg:order-none">
+            <div class="z-10 flex flex-row self-end justify-center order-last col-span-12 gap-5 md:justify-start lg:col-span-2 lg:flex-col banner-selectors lg:order-none lg:self-auto">
                 <template x-for="(game, index) in featured_games" :key="index">
                     <a class="w-fit" href="#" @click.prevent="setFeaturedGame(index)" @mouseleave="pausedProgressBar = false" @mouseenter="pausedProgressBar = true">
                         <img class="w-12 h-12 transition duration-200 rounded" :src="game.badge" :alt="game.title" :title="game.title" :class="(index == selected_game_index) ? '' : 'grayscale hover:sepia'">
@@ -60,7 +60,7 @@
             </div>
 
             <div class="z-10 col-span-12 text-white md:col-span-6 banner-content">
-                <h2 x-text="selected_game.header" class="font-bold text-[40px] md:text-[64px] leading-[44px] md:leading-[70px]"></h2>
+                <h2 x-text="selected_game.header" class="font-bold text-[40px] md:text-[64px] pr-16 md:pr-0 leading-[44px] md:leading-[70px]"></h2>
                 <p x-text="selected_game.description" class="mt-4 text-[18px] leading-[27px]"></p>
 
                 <button class="inline-flex items-center bg-[#00AEFF] font-semibold text-base text-white border-[0.7px] border-[#00AEFF] px-8 py-[14px] mt-8 focus:outline-none hover:bg-cyan-700 rounded transition-colors duration-150">
@@ -68,7 +68,7 @@
                 </button>
             </div>
 
-            <div class="z-10 flex-col hidden h-full col-span-12 md:col-span-6 lg:col-span-4 md:flex w-fit justify-self-end py-28 banner-extras">
+            <div class="z-10 flex-col hidden h-full col-span-12 md:col-span-6 lg:col-span-4 md:flex w-fit justify-self-end 2xl:pb-28 lg:pt-14 2xl:pt-40 banner-extras">
                 <div class="flex flex-col items-end">
                     <img class="h-40 w-72 banner_logo" :src="selected_game.logo" :alt="selected_game.title" :title="selected_game.title" />
                 </div>
@@ -104,12 +104,12 @@
         <div class="banner-progress absolute h-[3px] w-[1px] bg-[#00AEFF] bottom-0 left-0"></div>
     </section>
 
-    <section class="container flex flex-col w-full py-20 mx-auto exclusives">
+    <section class="container flex flex-col w-full px-6 py-12 mx-auto md:py-20 2xl:px-0 exclusives">
         <div class="flex flex-row justify-between mb-20 exclusives-header">
             <p class="font-semibold text-[#8F9199] text-[15px] uppercase hidden lg:flex">Games</p>
-            <h3 class="text-white font-bold text-[32px] leading-9">Jogos<br />exclusivos</h3>
+            <h3 class="text-white font-bold text-[28px] md:text-[32px] leading-9">Jogos<br />exclusivos</h3>
 
-            <div class="flex flex-row gap-6 pb-2 socials place-self-end">
+            <div class="flex-row hidden gap-6 pb-2 md:flex socials place-self-end">
                 <a href="#">
                     <svg class="w-5 h-5 text-white hover:text-[#148EFF] transition-colors duration-150" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>Battle.net</title>
@@ -136,7 +136,7 @@
                 </a>
             </div>
 
-            <a href="#" class="links text-base text-[#00AEFF] hover:text-cyan-700 transition-colors duration-150 font-semibold place-self-end pb-2" title="Ir para a página">
+            <a href="#" class="links text-sm md:text-base text-[#00AEFF] hover:text-cyan-700 transition-colors duration-150 font-semibold place-self-end pb-2" title="Ir para a página">
                 <svg class="w-2 h-2 inline-flex mr-2 text-[#61CDFF]" viewBox="0 0 9 10" xmlns="http://www.w3.org/2000/svg">
                     <rect y="0.5" width="3" height="3" fill="currentColor"/>
                     <rect y="6.5" width="3" height="3" fill="currentColor"/>
@@ -162,9 +162,9 @@
             </template>
 
                 <div class="border border-[#212428] flex flex-col items-center justify-center rounded">
-                    <img class="rounded" src="/public/assets/logo-blizzard.png" title="Blizzard">
-                    <a href="#" class="mt-[36px] text-base font-semibold text-neutral-200 hover:text-cyan-700 transition-colors duration-150" title="Ir para a página">
-                        <svg class="inline-flex w-2 h-2 mr-2" viewBox="0 0 9 10" xmlns="http://www.w3.org/2000/svg">
+                    <img class="h-8 rounded md:h-10" src="/public/assets/logo-blizzard.png" title="Blizzard">
+                    <a href="#" class="mt-[36px] text-xs md:text-base font-semibold text-center text-neutral-200 hover:text-cyan-700 transition-colors duration-150" title="Ir para a página">
+                        <svg class="hidden w-2 h-2 mr-2 md:inline-flex" viewBox="0 0 9 10" xmlns="http://www.w3.org/2000/svg">
                             <rect y="0.5" width="3" height="3" fill="currentColor"/>
                             <rect y="6.5" width="3" height="3" fill="currentColor"/>
                             <rect x="6" y="0.5" width="3" height="3" fill="currentColor"/>
@@ -176,9 +176,9 @@
         </div>
     </section>
 
-    <section class="relative py-32 cta h-fit md:py-16 xl:py-0">
-        <div class="container grid items-center justify-between grid-cols-3 mx-auto">
-            <div class="z-10 cta-content">
+    <section class="relative py-16 lg:py-32 cta h-fit md:py-16 xl:py-0">
+        <div class="container grid items-center justify-between grid-cols-1 mx-auto md:grid-cols-3">
+            <div class="z-10 px-6 cta-content 2xl:px-0">
                 <img src="/public/assets/logo-battle-net.png" alt="battle.net" class="logo">
                 <h3 class="mt-8 font-bold text-[32px] text-white leading-9">Baixe agora o battle.net</h3>
 
@@ -237,13 +237,13 @@
                     </div>
                 </button>
 
-                <div class="flex items-center mt-12 mobile-info">
+                <div class="flex items-center mt-12 mb-10 mobile-info md:mb-0">
                     <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1111 21H3.22222C1.99444 21 1 20.0056 1 18.7778V3.22222C1 1.99444 1.99444 1 3.22222 1H12.1111C13.3389 1 14.3333 1.99444 14.3333 3.22222V18.7778C14.3333 20.0056 13.3389 21 12.1111 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M7.66553 16.8333C7.5122 16.8333 7.38775 16.9578 7.38887 17.1111C7.38887 17.2644 7.51331 17.3889 7.66664 17.3889C7.81998 17.3889 7.94442 17.2644 7.94442 17.1111C7.94442 16.9578 7.81998 16.8333 7.66553 16.8333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M6.27783 4.33339H9.05561" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
-                    <p class="ml-3 text-sm font-semibold leading-5 text-neutral-200">Também disponível como <br /> aplicativo móvel</p>
+                    <p class="ml-3 text-sm font-semibold leading-5 text-neutral-200">Também disponível como <br /> <a href="#" title="Ir para a página">aplicativo móvel</a></p>
                 </div>
             </div>
 
@@ -261,7 +261,7 @@
                 <div class="flex items-end justify-center min-h-screen px-4 text-center md:items-center sm:block sm:p-0">
                     <div x-cloak @click="modalLogin = false" x-show="modalLogin" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-40" aria-hidden="true"></div>
 
-                    <div id="modalLogin" x-cloak x-show="modalLogin" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="inline-block w-full py-16 px-32 my-20 overflow-hidden text-left transition-all transform bg-[#020203] rounded-lg shadow-xl max-w-2xl">
+                    <div id="modalLogin" x-cloak x-show="modalLogin" x-transition:enter="transition ease-out duration-300 transform" x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="transition ease-in duration-200 transform" x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100" x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" class="inline-block w-full py-16 px-6 md:px-32 my-20 overflow-hidden text-left transition-all transform bg-[#020203] rounded-lg shadow-xl max-w-2xl">
                         <div class="flex items-center justify-center space-x-4">
                             <h1 class="font-medium text-gray-800 ">
                                 <img class="w-auto h-5" src="/public/assets/logo-battle-net.png" alt="Battle.net">
@@ -280,16 +280,16 @@
                         <form class="mt-10">
                             <div>
                                 <!-- <label for="user name" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Login</label> -->
-                                <input placeholder="E-mail ou telefone" type="text" class="block w-full px-4 py-3 mt-2 text-gray-600 placeholder-gray-400 text-[15px] bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                                <input placeholder="E-mail ou telefone" type="text" class="block w-full px-4 py-3 mt-2 text-gray-600 placeholder-gray-400 text-[15px] bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40">
                             </div>
 
                             <div class="mt-4">
                                 <!-- <label for="password" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Senha</label> -->
-                                <input placeholder="Senha" type="password" class="block w-full px-4 py-3 mt-2 text-gray-600 placeholder-gray-400 text-[15px] bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+                                <input placeholder="Senha" type="password" class="block w-full px-4 py-3 mt-2 text-gray-600 placeholder-gray-400 text-[15px] bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40">
                             </div>
 
                             <div class="flex justify-center mt-6">
-                                <button type="button" class="py-3 w-full font-semibold text-base tracking-wide text-white capitalize transition-colors duration-200 transform bg-[#00AEFF] rounded-md hover:bg-cyan-700 focus:outline-none focus:bg-cyan-700 focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+                                <button type="button" class="py-3 w-full font-semibold text-base tracking-wide text-white capitalize transition-colors duration-200 transform bg-[#00AEFF] rounded-md hover:bg-cyan-700 focus:outline-none focus:bg-cyan-700 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                                     Conectar-se
                                 </button>
                             </div>

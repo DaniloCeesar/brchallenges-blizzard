@@ -10,9 +10,10 @@
 .cta::before {
     content: "";
 
+    background-attachment: fixed;
     background-image: url('/public/assets/footer-background.png');
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 
     position: absolute;
     top: -142px;
