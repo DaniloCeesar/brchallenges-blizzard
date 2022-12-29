@@ -14,7 +14,8 @@ const app = () => {
                 "background": "/public/assets/banner-hero/games/diablo-bg.png",
                 "logo": "/public/assets/banner-hero/games/diablo-logo.png",
                 "trailer": "/public/assets/banner-hero/games/diablo-animation.gif",
-                "trailer_static": "/public/assets/banner-hero/games/diablo-animation-cover.png"
+                "trailer_static": "/public/assets/banner-hero/games/diablo-animation-cover.png",
+                "presale": false
             },
             {
                 "title": "Hearthstone",
@@ -24,7 +25,8 @@ const app = () => {
                 "background": "/public/assets/banner-hero/games/hearthstone-bg.png",
                 "logo": "/public/assets/banner-hero/games/hearthstone-logo.png",
                 "trailer": "/public/assets/banner-hero/games/hearthstone-animation.gif",
-                "trailer_static": "/public/assets/banner-hero/games/hearthstone-animation-cover.png"
+                "trailer_static": "/public/assets/banner-hero/games/hearthstone-animation-cover.png",
+                "presale": true
             },
             {
                 "title": "Shadowlands",
@@ -34,7 +36,8 @@ const app = () => {
                 "background": "/public/assets/banner-hero/games/wow-bg.png",
                 "logo": "/public/assets/banner-hero/games/wow-logo.png",
                 "trailer": "/public/assets/banner-hero/games/wow-animation.gif",
-                "trailer_static": "/public/assets/banner-hero/games/wow-animation-cover.png"
+                "trailer_static": "/public/assets/banner-hero/games/wow-animation-cover.png",
+                "presale": true
             }
         ],
         games: [],
