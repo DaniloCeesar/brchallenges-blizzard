@@ -41,8 +41,8 @@ const app = () => {
 
         pausedProgressBar: false,
 
-        async getAllGames() { // @TODO: Substituir por endpoint externo
-            let response = await fetch('/src/js/games.json');
+        async getAllGames() {
+            let response = await fetch("https://api.brchallenges.com/api/blizzard/games");
             this.games = await response.json();
 
             return this.games;
