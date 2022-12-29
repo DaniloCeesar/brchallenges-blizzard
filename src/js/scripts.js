@@ -48,8 +48,13 @@ const app = () => {
             return this.games;
         },
 
-        getUserSystem() { // @TODO: Criar esta função
-            return "Linux";
+        getUserSystem() {
+            let browserPlatform = navigator?.userAgentData?.platform || navigator?.platform || 'unknown';
+
+            return (browserPlatform.toLowerCase().includes("win")) ? "Windows" : (
+                (browserPlatform.toLowerCase().includes("mac")) ? "macOS" :
+                    "Linux"
+            );
         },
 
         async setFeaturedGame(index) {
