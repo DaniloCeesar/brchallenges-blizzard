@@ -18,7 +18,7 @@ const app = () => {
             },
             {
                 "title": "Hearthstone",
-                "header": "Nova pacote de expansão de Hearthstone",
+                "header": "Novo pacote de expansão de Hearthstone",
                 "description": "A Hora e a Aliança se encontraram no Vale Alterac para lutar",
                 "badge": "/public/assets/banner-hero/icons/game-2.png",
                 "background": "/public/assets/banner-hero/games/hearthstone-bg.png",
