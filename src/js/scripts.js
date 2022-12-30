@@ -42,6 +42,82 @@ const app = () => {
         ],
         games: [],
 
+        isOpenMenuMobile: false,
+        isOpenMenuJogos: false,
+        isOpenMenuEsportes: false,
+        megamenu_games: [
+            {
+                "title": "Diablo® II Ressurected",
+                "badge": "/public/assets/megamenu/badge-1.png"
+            },
+            {
+                "title": "Overwatch® 2",
+                "badge": "/public/assets/megamenu/badge-2.png"
+            },
+            {
+                "title": "World of Warcraft®",
+                "badge": "/public/assets/megamenu/badge-3.png"
+            },
+            {
+                "title": "Hearthstone®",
+                "badge": "/public/assets/megamenu/badge-4.png"
+            },
+            {
+                "title": "Heroes of the Storm®",
+                "badge": "/public/assets/megamenu/badge-5.png"
+            },
+            {
+                "title": "Warcraft® III Reforged",
+                "badge": "/public/assets/megamenu/badge-6.png"
+            },
+            {
+                "title": "Diablo® IV",
+                "badge": "/public/assets/megamenu/badge-7.png"
+            },
+            {
+                "title": "Diablo® Immortal",
+                "badge": "/public/assets/megamenu/badge-8.png"
+            },
+            {
+                "title": "Diablo® III",
+                "badge": "/public/assets/megamenu/badge-9.png"
+            },
+            {
+                "title": "StarCraft® II",
+                "badge": "/public/assets/megamenu/badge-10.png"
+            },
+            {
+                "title": "StarCraft® Remastered",
+                "badge": "/public/assets/megamenu/badge-11.png"
+            },
+            {
+                "title": "Arcade da Blizzard®",
+                "badge": "/public/assets/megamenu/badge-12.png"
+            }
+        ],
+        megamenu_sports: [
+            {
+                "title": "Hearthstone® Masters",
+                "badge": "/public/assets/megamenu/challenge-1.png"
+            },
+            {
+                "title": "Campeonato Mundial de Arena WoW®",
+                "badge": "/public/assets/megamenu/challenge-2.png"
+            },
+            {
+                "title": "StarCraft® II WCS",
+                "badge": "/public/assets/megamenu/challenge-3.png"
+            },
+            {
+                "title": "Copa Mundial de Overwatch®",
+                "badge": "/public/assets/megamenu/challenge-4.png"
+            },
+            {
+                "title": "Liga de Overwatch®",
+                "badge": "/public/assets/megamenu/challenge-5.png"
+            }
+        ],
+
         pausedProgressBar: false,
 
         async getAllGames() {
