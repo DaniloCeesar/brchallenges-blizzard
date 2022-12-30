@@ -1,31 +1,31 @@
 {
-    "name": "brchallenges-blizzard",
-    "version": "1.0.0",
-    "description": "",
-    "main": "tailwind.config.js",
-    "dependencies": {      
-    },
-    "devDependencies": {
-      "tailwindcss": "^3.0.12",
-      "uglify-js": "^3.14.5"
-    },
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "build": "mkdir -p dist && cp -R public/* dist/ && tailwindcss -i src/css/tailwind.css -o dist/style.css --minify && uglifyjs --compress --mangle -- src/js/scripts.js > dist/scripts.js"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/daniloceesar/brchallenges-blizzard.git"
-    },
-    "keywords": [
-      "brchallenges",
-      "tailwindcss",
-      "alpinejs"
-    ],
-    "author": "Danilo César",
-    "license": "MPL-2.0",
-    "bugs": {
-      "url": "https://github.com/daniloceesar/brchallenges-blizzard/issues"
-    },
-    "homepage": "https://github.com/daniloceesar/brchallenges-blizzard"
-  }
+  "name": "brchallenges-blizzard",
+  "version": "1.0.0",
+  "description": "Landing page fictícia da empresa Blizzard, recriada para o Desafio do BRChallenges",
+  "main": "tailwind.config.js",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "tailwindcss": "^3.2.4",
+    "uglify-js": "^3.14.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p dist && cp -R public/* dist/ && tailwindcss -i src/css/styles.css -o dist/styles.css --minify && uglifyjs --compress --mangle -- src/js/*.js > dist/scripts.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daniloceesar/brchallenges-blizzard.git"
+  },
+  "keywords": [
+    "brchallenges",
+    "tailwindcss",
+    "alpinejs"
+  ],
+  "author": "Danilo César",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/daniloceesar/brchallenges-blizzard/issues"
+  },
+  "homepage": "https://github.com/daniloceesar/brchallenges-blizzard"
+}
