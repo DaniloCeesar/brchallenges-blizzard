@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="relative bg-[#020203] font-[Poppins] overflow-x-hidden" x-data="app()">
+<body class="relative bg-[#020203] font-[Poppins] overflow-x-hidden" x-data="app()" @resize.window="isOpenMenuMobile = false, isOpenMenuJogos = false, isOpenMenuEsportes = false">
 
     <header class="relative z-50 text-white border-b-[1.5px] border-b-white/10 transition ease-out duration-300 lg:duration-200" :class="(isOpenMenuMobile || isOpenMenuJogos || isOpenMenuEsportes) ? 'bg-[#020203]' : ''">
         <div class="container flex flex-row flex-wrap items-center justify-between px-6 mx-auto py-7 2xl:px-0">
