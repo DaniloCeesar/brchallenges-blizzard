@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Acrescido pelo Alpine.js dinamicamente */
+.text-\[\#00AEFF\] {
+    --tw-text-opacity: 1;
+    color: rgb(0 174 255 / var(--tw-text-opacity));
+}
+
 [x-cloak] {
     display: none !important;
 }
