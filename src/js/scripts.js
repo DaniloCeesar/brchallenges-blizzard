@@ -39,6 +39,7 @@ const app = () => {
         ],
         games: [],
 
+        isOpenMenuMobile: false,
         isOpenMenuJogos: false,
         isOpenMenuEsportes: false,
         megamenu_games: [
