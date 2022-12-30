@@ -10,33 +10,33 @@ const app = () => {
                 "title": "Diablo IV",
                 "header": "Retorne à escuridão com o game Diablo IV",
                 "description": "O retorno de Lilith traz uma era de escuridão e sofrimento",
-                "badge": "/public/assets/banner-hero/icons/game-1.png",
-                "background": "/public/assets/banner-hero/games/diablo-bg.png",
-                "logo": "/public/assets/banner-hero/games/diablo-logo.png",
-                "trailer": "/public/assets/banner-hero/games/diablo-animation.gif",
-                "trailer_static": "/public/assets/banner-hero/games/diablo-animation-cover.png",
+                "badge": "/assets/banner-hero/icons/game-1.png",
+                "background": "/assets/banner-hero/games/diablo-bg.png",
+                "logo": "/assets/banner-hero/games/diablo-logo.png",
+                "trailer": "/assets/banner-hero/games/diablo-animation.gif",
+                "trailer_static": "/assets/banner-hero/games/diablo-animation-cover.png",
                 "presale": false
             },
             {
                 "title": "Hearthstone",
                 "header": "Novo pacote de expansão de Hearthstone",
                 "description": "A Hora e a Aliança se encontraram no Vale Alterac para lutar",
-                "badge": "/public/assets/banner-hero/icons/game-2.png",
-                "background": "/public/assets/banner-hero/games/hearthstone-bg.png",
-                "logo": "/public/assets/banner-hero/games/hearthstone-logo.png",
-                "trailer": "/public/assets/banner-hero/games/hearthstone-animation.gif",
-                "trailer_static": "/public/assets/banner-hero/games/hearthstone-animation-cover.png",
+                "badge": "/assets/banner-hero/icons/game-2.png",
+                "background": "/assets/banner-hero/games/hearthstone-bg.png",
+                "logo": "/assets/banner-hero/games/hearthstone-logo.png",
+                "trailer": "/assets/banner-hero/games/hearthstone-animation.gif",
+                "trailer_static": "/assets/banner-hero/games/hearthstone-animation-cover.png",
                 "presale": true
             },
             {
                 "title": "Shadowlands",
                 "header": "Desbrave as Terras Sombrias em Shadowlands!",
                 "description": "O que jaz além do mundo que você conhece?",
-                "badge": "/public/assets/banner-hero/icons/game-3.png",
-                "background": "/public/assets/banner-hero/games/wow-bg.png",
-                "logo": "/public/assets/banner-hero/games/wow-logo.png",
-                "trailer": "/public/assets/banner-hero/games/wow-animation.gif",
-                "trailer_static": "/public/assets/banner-hero/games/wow-animation-cover.png",
+                "badge": "/assets/banner-hero/icons/game-3.png",
+                "background": "/assets/banner-hero/games/wow-bg.png",
+                "logo": "/assets/banner-hero/games/wow-logo.png",
+                "trailer": "/assets/banner-hero/games/wow-animation.gif",
+                "trailer_static": "/assets/banner-hero/games/wow-animation-cover.png",
                 "presale": true
             }
         ],
@@ -48,73 +48,73 @@ const app = () => {
         megamenu_games: [
             {
                 "title": "Diablo® II Ressurected",
-                "badge": "/public/assets/megamenu/badge-1.png"
+                "badge": "/assets/megamenu/badge-1.png"
             },
             {
                 "title": "Overwatch® 2",
-                "badge": "/public/assets/megamenu/badge-2.png"
+                "badge": "/assets/megamenu/badge-2.png"
             },
             {
                 "title": "World of Warcraft®",
-                "badge": "/public/assets/megamenu/badge-3.png"
+                "badge": "/assets/megamenu/badge-3.png"
             },
             {
                 "title": "Hearthstone®",
-                "badge": "/public/assets/megamenu/badge-4.png"
+                "badge": "/assets/megamenu/badge-4.png"
             },
             {
                 "title": "Heroes of the Storm®",
-                "badge": "/public/assets/megamenu/badge-5.png"
+                "badge": "/assets/megamenu/badge-5.png"
             },
             {
                 "title": "Warcraft® III Reforged",
-                "badge": "/public/assets/megamenu/badge-6.png"
+                "badge": "/assets/megamenu/badge-6.png"
             },
             {
                 "title": "Diablo® IV",
-                "badge": "/public/assets/megamenu/badge-7.png"
+                "badge": "/assets/megamenu/badge-7.png"
             },
             {
                 "title": "Diablo® Immortal",
-                "badge": "/public/assets/megamenu/badge-8.png"
+                "badge": "/assets/megamenu/badge-8.png"
             },
             {
                 "title": "Diablo® III",
-                "badge": "/public/assets/megamenu/badge-9.png"
+                "badge": "/assets/megamenu/badge-9.png"
             },
             {
                 "title": "StarCraft® II",
-                "badge": "/public/assets/megamenu/badge-10.png"
+                "badge": "/assets/megamenu/badge-10.png"
             },
             {
                 "title": "StarCraft® Remastered",
-                "badge": "/public/assets/megamenu/badge-11.png"
+                "badge": "/assets/megamenu/badge-11.png"
             },
             {
                 "title": "Arcade da Blizzard®",
-                "badge": "/public/assets/megamenu/badge-12.png"
+                "badge": "/assets/megamenu/badge-12.png"
             }
         ],
         megamenu_sports: [
             {
                 "title": "Hearthstone® Masters",
-                "badge": "/public/assets/megamenu/challenge-1.png"
+                "badge": "/assets/megamenu/challenge-1.png"
             },
             {
                 "title": "Campeonato Mundial de Arena WoW®",
-                "badge": "/public/assets/megamenu/challenge-2.png"
+                "badge": "/assets/megamenu/challenge-2.png"
             },
             {
                 "title": "StarCraft® II WCS",
-                "badge": "/public/assets/megamenu/challenge-3.png"
+                "badge": "/assets/megamenu/challenge-3.png"
             },
             {
                 "title": "Copa Mundial de Overwatch®",
-                "badge": "/public/assets/megamenu/challenge-4.png"
+                "badge": "/assets/megamenu/challenge-4.png"
             },
             {
                 "title": "Liga de Overwatch®",
-                "badge": "/public/assets/megamenu/challenge-5.png"
+                "badge": "/assets/megamenu/challenge-5.png"
             }
         ],
 

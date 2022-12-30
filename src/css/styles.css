@@ -11,7 +11,7 @@
     content: "";
 
     background-attachment: fixed;
-    background-image: url('/public/assets/footer-background.png');
+    background-image: url('/assets/footer-background.png');
     background-position: center;
     background-size: cover;
 
@@ -67,7 +67,7 @@
 }
 
 #modals #modalLogin {
-    background-image: url('/public/img/modal-bg.png');
+    background-image: url('/img/modal-bg.png');
     background-size: cover;
     background-position: center;
 }
