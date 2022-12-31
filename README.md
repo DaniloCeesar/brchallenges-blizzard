@@ -7,7 +7,7 @@
 <a href="#-atribuicoes">Atribuições</a> |
 <a href="#-licenca">Licença</a>
 
-<pre lang="bash"><code style="white-space: pre-line">Landing page da empresa Blizzard®, recriada para fins educativos, destinada ao Desafio #2 do BRChallenges.
+<pre lang="bash"><code style="white-space: pre-line">Landing page da Blizzard®, recriada para fins educativos, destinada ao Desafio do BRChallenges.
 </code></pre>
 
 <img alt="Repository top language" src="https://img.shields.io/github/languages/top/daniloceesar/brchallenges-blizzard.svg" />
@@ -54,14 +54,14 @@ Para a realização deste desafio foi utilizado um protótipo Figma® como base,
 
 Conforme descritos no [repositório original do desafio](https://github.com/leovargasdev/br-challenges-blizzard):
 
-### Nível Fácil
+#### Nível Fácil
 
 - [x] Criar as seções: **Menu**, **Banner hero**, **Footer**.
 - [x] O texto e o ícone do botão “Baixar jogo” devem ser alterados conforme o sistema operacional do usuário que estiver acessando a página. ([Acessar material de apoio](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/userAgent)).
 - [x] Aplicar efeito de _hover_ nas opções do menu de navegação.
 - [x] Aplicar responsividade para as seguintes resoluções: 1920px, 1440px, 768px e 375px.
 
-### Nível Médio
+#### Nível Médio
 
 - [x] Todos os requisitos do nível Fácil.
 - [x] Criar as seções: **Menu**, **Banner hero**, **Jogos Exclusivo**, **Footer**.
@@ -69,7 +69,7 @@ Conforme descritos no [repositório original do desafio](https://github.com/leov
 - [x] Aplicar efeito de _hover_ nas imagens dos jogos da seção **Jogos Exclusivos**.
 - [x] Alterar as informações da seção **Banner Hero** ao selecionar uma opção no menu lateral. Os jogos disponíveis são: **Diablo®**, **HearthStone®** e **World of Warcraft®**.
 
-### Nível Difícil
+#### Nível Difícil
 
 - [x] Todos os requisitos dos níveis Fácil e Médio.
 - [x] Ao clicar no botão **Logar** do menu de navegação, deverá ser exibido o _modal de login_.
